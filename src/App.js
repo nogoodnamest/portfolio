@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Profilo from './Profilo';
 
 function Home() {
   const [count, setCount] = useState(0);
@@ -22,11 +23,13 @@ function App() {
     <Router>
       <nav style={{ marginBottom: "20px" }}>
         <Link to="/" style={{ marginRight: "10px" }}>Home</Link>
-        <Link to="/about">About</Link>
+        <Link to="/about" style={{ marginRight: "10px" }}>About</Link>
+        <Link to="/profilo">Profilo</Link>
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/profilo" element={<Profilo />} />
       </Routes>
     </Router>
   );
