@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Profilo from './Profilo';
+import Portfolio from './Portfolio';
 import Home from './Home';
 import About from './About';
 import './App.css';
@@ -9,14 +9,18 @@ function App() {
   return (
     <Router>
       <nav className="navbar">
-        <Link className="nav-btn" to="/">Home</Link>
-        <Link className="nav-btn" to="/about">About</Link>
-        <Link className="nav-btn" to="/profilo">Profilo</Link>
+        <div className="nav-left">
+          <Link className="nav-btn" to="/about">About</Link>
+          <Link className="nav-btn" to="/portfolio">Portfolio</Link>
+        </div>
+        <div className="nav-center">
+          <span className="site-title">Langchen Xiang</span>
+        </div>
       </nav>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<About />} />         {/* About is now the homepage */}
         <Route path="/about" element={<About />} />
-        <Route path="/profilo" element={<Profilo />} />
+        <Route path="/portfolio" element={<Portfolio />} />
       </Routes>
     </Router>
   );
