@@ -1,26 +1,29 @@
-import React, { useState } from "react";
-import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Portfolio from './Portfolio';
-import Home from './Home';
-import About from './About';
-import './App.css';
+import React from "react";
+import { HashRouter as Router, Routes, Route, NavLink } from "react-router-dom";
+import Projects from "./Projects";
+import About from "./About";
+import Resume from "./Resume";     // <-- add this
+import "./App.css";
 
 function App() {
   return (
     <Router>
       <nav className="navbar">
         <div className="nav-left">
-          <Link className="nav-btn" to="/about">About</Link>
-          <Link className="nav-btn" to="/portfolio">Portfolio</Link>
+          <NavLink to="/about" className="site-title">Langchen's Website</NavLink>
         </div>
-        <div className="nav-center">
-          <span className="site-title">Langchen Xiang</span>
+        <div className="nav-right">
+          <NavLink className="nav-link" to="/about">About</NavLink>
+          <NavLink className="nav-link" to="/resume">Resume</NavLink>       {/* <-- new */}
+          <NavLink className="nav-link" to="/projects">Projects</NavLink>
         </div>
       </nav>
+
       <Routes>
-        <Route path="/" element={<About />} />         {/* About is now the homepage */}
+        <Route path="/" element={<About />} />
         <Route path="/about" element={<About />} />
-        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/resume" element={<Resume />} />                       {/* <-- new */}
+        <Route path="/projects" element={<Projects />} />
       </Routes>
     </Router>
   );

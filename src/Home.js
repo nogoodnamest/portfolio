@@ -6,7 +6,7 @@ function Home() {
     <div className="home-container">
       <h1>👋 Welcome to My Portfolio</h1>
       <p>This site showcases some of my recent interactive and creative projects.</p>
-      <a className="home-cta" href="#/profilo"> View My Work</a>
+      <a className="home-cta" href="#/portfilo"> View My Work</a>
     </div>
   );
 }

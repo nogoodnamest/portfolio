@@ -1,5 +1,5 @@
 import React from 'react';
-import './Portfolio.css'; // You'll create this for styling
+import './Projects.css'; // You'll create this for styling
 import project1Image from './Icon-180 1.png';
 import project2Image from './vrchat.png';
 import project3Image from './logo.svg';
@@ -32,7 +32,7 @@ const projects = [
   }
 ];
 
-function Portfolio() {
+function Projects() {
   return (
     <div className="profilo-container">
       <h1>My Projects</h1>
@@ -52,4 +52,4 @@ function Portfolio() {
   );
 }
 
-export default Portfolio;
+export default Projects;
